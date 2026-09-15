@@ -4,10 +4,10 @@ import heroImage from '../assets/images/hero_dr_sara_studio_1789472901178.jpg';
 
 interface HeroProps {
   onBookConsultation: () => void;
-  onExploreTreatments: () => void;
+  onExploreGallery: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onBookConsultation, onExploreTreatments }) => {
+export const Hero: React.FC<HeroProps> = ({ onBookConsultation, onExploreGallery }) => {
   return (
     <section
       id="hero"
@@ -55,10 +55,10 @@ export const Hero: React.FC<HeroProps> = ({ onBookConsultation, onExploreTreatme
 
               <button
                 id="hero-cta-explore"
-                onClick={onExploreTreatments}
+                onClick={onExploreGallery}
                 className="inline-flex items-center justify-center px-8 py-4 text-xs sm:text-[13px] uppercase tracking-[0.2em] font-medium text-[#2E2A27] bg-transparent hover:bg-[#EFE9DF] border border-[#D9CFBF] rounded-full transition-all duration-300"
               >
-                <span>Explore Treatments</span>
+                <span>Explore Smile Gallery</span>
                 <ChevronRight className="w-4 h-4 ml-1 text-[#8E8276]" />
               </button>
             </div>

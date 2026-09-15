@@ -2,10 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
-import { Services } from './components/Services';
 import { Testimonials } from './components/Testimonials';
 import { SmileGallery } from './components/SmileGallery';
-import { Journal } from './components/Journal';
 import { BookingSection } from './components/BookingSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -78,8 +76,8 @@ export default function App() {
     }
   };
 
-  const scrollToServices = () => {
-    const el = document.getElementById('services');
+  const scrollToGallery = () => {
+    const el = document.getElementById('gallery');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -98,19 +96,13 @@ export default function App() {
         {/* 1. Hero Section */}
         <Hero
           onBookConsultation={() => scrollToBooking()}
-          onExploreTreatments={scrollToServices}
+          onExploreGallery={scrollToGallery}
         />
 
         {/* 2. About Section: Where Dentistry Meets Artistry */}
         <About />
 
-        {/* 3. Signature Services & Treatments */}
-        <Services
-          services={services}
-          onBookService={(name) => scrollToBooking(name)}
-        />
-
-        {/* 4. Kind Words From Our Patients (Testimonials) */}
+        {/* 3. Kind Words From Our Patients (Testimonials) */}
         <Testimonials testimonials={testimonials} />
 
         {/* 5. Smile Gallery: Transformations, With Intention */}
@@ -119,13 +111,7 @@ export default function App() {
           onBookConsultation={(subj) => scrollToBooking(subj)}
         />
 
-        {/* 6. The Journal */}
-        <Journal
-          articles={journal}
-          onBookConsultation={() => scrollToBooking()}
-        />
-
-        {/* 7. Booking & FAQs Section */}
+        {/* 6. Booking & FAQs Section */}
         <BookingSection
           services={services}
           faqs={faqs}
