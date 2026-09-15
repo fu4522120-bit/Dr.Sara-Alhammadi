@@ -1,0 +1,6 @@
+{
+  "name": "Dr. Sara Alhammadi Dental Studio",
+  "description": "Cosmetic and prosthodontic dentistry in Dubai — digital smile design, porcelain veneers, implants and full mouth rehabilitation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
